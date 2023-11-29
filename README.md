@@ -6,3 +6,4 @@
 - Eliott PRUNEAU
 - JLIL DRISS
 - Cécile DUVAL
+- Pierre LOPEZ
