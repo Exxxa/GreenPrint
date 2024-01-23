@@ -21,9 +21,8 @@
       email: 'lopez@et.esiea.fr',
       profilePicture: 'https://example.com/profile-picture.jpg',
     };
-  </script>
-  
-  
+</script>
+
 <div class="flex">
     <div class="w-1/4 p-8">
       <h2 class="text-lg font-semibold mb-4">Settings</h2>
@@ -58,32 +57,61 @@
         </div>
     {/if}
     {#if selectedSection === 'Security'}
-    <h3 class="text-xl font-semibold mb-4">Security Settings</h3>
+        <!-- Security Settings -->
+        <h3 class="text-xl font-semibold mb-4">Security Settings</h3>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600">Password</label>
+          <input type="password" class="text-gray-600 mt-1 p-2 border rounded-md w-full" />
+        </div>
     {/if}
     {#if selectedSection === 'Privacy'}
-    <h3 class="text-xl font-semibold mb-4">Privacy</h3>
+        <!-- Privacy Settings -->
+        <h3 class="text-xl font-semibold mb-4">Privacy Settings</h3>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600">Profile Visibility</label>
+          <select class="text-gray-600 mt-1 p-2 border rounded-md w-full">
+            <option>Public</option>
+            <option>Private</option>
+          </select>
+        </div>
     {/if}
     {#if selectedSection === 'Notifications'}
-    <h3 class="text-xl font-semibold mb-4">Notifications</h3>
+        <!-- Notifications Settings -->
+        <h3 class="text-xl font-semibold mb-4">Notifications Settings</h3>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600">Email Notifications</label>
+          <input type="checkbox" class="text-gray-600 mt-1 p-2 border rounded-md w-full" />
+        </div>
     {/if}
     {#if selectedSection === 'Account'}
-    <h3 class="text-xl font-semibold mb-4">Account</h3>
+        <!-- Account Settings -->
+        <h3 class="text-xl font-semibold mb-4">Account Settings</h3>
+        <!-- Add your account settings here -->
     {/if}
     {#if selectedSection === 'Activity'}
-    <h3 class="text-xl font-semibold mb-4">Activity</h3>
+        <!-- Activity Settings -->
+        <h3 class="text-xl font-semibold mb-4">Activity Settings</h3>
+        <!-- Add your activity settings here -->
     {/if}
     {#if selectedSection === 'Devices'}
-    <h3 class="text-xl font-semibold mb-4">Devices</h3>
+        <!-- Devices Settings -->
+        <h3 class="text-xl font-semibold mb-4">Devices Settings</h3>
+        <!-- Add your devices settings here -->
     {/if}
-    {#if selectedSection === 'Subscription'}
-    <h3 class="text-xl font-semibold mb-4">Subscription</h3>
+    {#if selectedSection === 'Subscriptions'}
+        <!-- Subscriptions Settings -->
+        <h3 class="text-xl font-semibold mb-4">Subscriptions Settings</h3>
+        <!-- Add your subscriptions settings here -->
     {/if}
     {#if selectedSection === 'Delete Account'}
-    <h3 class="text-xl font-semibold mb-4">Delete Account</h3>
+        <!-- Delete Account Settings -->
+        <h3 class="text-xl font-semibold mb-4">Delete Account Settings</h3>
+        <!-- Add your delete account settings here -->
     {/if}
     {#if selectedSection === 'Help & Support'}
-    <h3 class="text-xl font-semibold mb-4">Help & Support</h3>
+        <!-- Help & Support Settings -->
+        <h3 class="text-xl font-semibold mb-4">Help & Support Settings</h3>
+        <!-- Add your help & support settings here -->
     {/if}
     </div>
-  </div>
-  
+</div>
