@@ -1,11 +1,14 @@
 <script lang="ts">
 	import '../app.postcss';
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
 
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
+	import { Moon, Sun } from 'lucide-svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	let isDark = false; // Add this line to maintain the theme state
 </script>
 
 <!-- App Shell -->
@@ -17,7 +20,8 @@
 				<strong class="text-xl uppercase">GreenPrint</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-        <p>Link</p>
+				<p>Link</p>
+				<LightSwitch />
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
