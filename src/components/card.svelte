@@ -1,3 +1,4 @@
-<div class="card p-4">
-    <slot />
+<div>
+    <h2 class="text-3xl">Card Title</h2>
+    <p><slot></slot></p>
 </div>
