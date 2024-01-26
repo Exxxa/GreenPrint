@@ -28,6 +28,7 @@
 		</svelte:fragment>
 	  </AppBar>
 	</svelte:fragment>
+
 	<!-- Page Route Content -->
 	<slot />
   </AppShell>
