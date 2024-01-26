@@ -10,7 +10,7 @@
 
 <div class="card card-hover rounded-t-md w-80">
     <a href={link}>
-	    <img src={image} {alt} class="w-full rounded-t-md" />
+	    <img src={image} {alt} class="w-full h-52 rounded-t-md" />
 	    <h2 class="text-2xl p-5">{title}</h2>
 
 	    <div class="footer p-5">
