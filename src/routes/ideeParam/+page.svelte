@@ -1,43 +1,33 @@
 <script lang="ts">
     export let NomDuProjet:string = "Nom du projet"
-
+	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
+	import General from './general.svelte';
+	import Recompenses from './recompenses.svelte';
+	import Contributions from './contrib.svelte';
+	let tabSet: number = 0;
 </script>
 
 <div class="grid grid-cols-10 ">
-	<div class="col-span-2 h-screen flex flex-col gap-5 p-8">
-        <h1 class="text-3xl" >{NomDuProjet}</h1>
-        <button type="button" class="btn variant-filled">Général</button>
-        <button type="button" class="btn variant-filled">Récompenses</button>
-        <button type="button" class="btn variant-filled">Contributions</button>
-        <button type="button" class="btn variant-filled">??</button>
-        
+	<div class="col-span-10 p-16">
+		<TabGroup>
+			<Tab bind:group={tabSet} name="tab1" value={0}>
+				<span>Général</span>
+			</Tab>
+			<Tab bind:group={tabSet} name="tab2" value={1}>Récompenses</Tab>
+			<Tab bind:group={tabSet} name="tab3" value={2}>Contributions</Tab>
+			<Tab bind:group={tabSet} name="tab3" value={3}>(???)</Tab>
+			<!-- Tab Panels --->
+			<svelte:fragment slot="panel">
+				{#if tabSet === 0}
+					<General/>
+				{:else if tabSet === 1}
+					<Recompenses/>
+				{:else if tabSet === 2}
+					<Contributions/>
+				{:else if tabSet === 3}
+					(tab panel 4 contents)
+				{/if}
+			</svelte:fragment>
+		</TabGroup>
 	</div>
-
-	<div class="col-span-6 h-screen flex flex-col gap-14 p-16">  
-        <form class="flex flex-col gap-2">
-			<label class="label">
-				<span>Nom Du Projet :</span>
-				<input class="input p-1" placeholder="Le nom du projet" />
-			</label>
-			<label class="label">
-				<span>Type de projet :</span>
-				<input class="input p-1" placeholder="Le type de projet" />
-			</label>
-            <label class="label">
-				<span>Introduction :</span>
-				<input class="input p-1" placeholder="L'introductio du projet" />
-			</label>
-            <label class="label">
-				<span>Description :</span>
-				<input class="input p-1" placeholder="La description du projet" />
-			</label>
-            <label class="label">
-				<span>Missions :</span>
-				<input class="input p-1" placeholder="Les missions du projet" />
-			</label>
-		</form>
-		<button type="button" class="btn variant-filled">Sauvegarder</button>
-	</div>
-
-	
 </div>
