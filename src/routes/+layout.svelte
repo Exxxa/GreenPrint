@@ -38,9 +38,11 @@
 
 <Drawer>
 	<div class="p-10 flex flex-col gap-10">
-		<div class="flex gap-5 item-center justify-center items-center">
-			<Logo width={50} height={50} />
-			<strong class="text-xl uppercase flex item-center justify-center">GreenPrint</strong>
+		<div class="item-center justify-center font-bold">
+			<a href="/" class="flex gap-5 item-center justify-center items-center">
+				<Logo width={50} height={50} />
+				<p class="text-xl uppercase flex item-center justify-center">GreenPrint</p>
+			</a>
 		</div>
 		<TreeView>
 			<TreeViewItem>
@@ -72,9 +74,11 @@
 				<!-- Menu Button (on the left) -->
 				<button class="btn variant-ghost" on:click={opennav}> &#9776; Menu </button>
 			</svelte:fragment>
-			<div class="flex gap-5 item-center justify-center items-center">
-				<Logo width={50} height={50} />
-				<strong class="text-xl uppercase flex item-center justify-center">GreenPrint</strong>
+			<div class="gap-5 item-center justify-center items-center">
+				<a href="/" class="flex gap-5 item-center justify-center items-center">
+					<Logo width={50} height={50} />
+					<strong class="text-xl uppercase flex item-center justify-center">GreenPrint</strong>
+				</a>
 			</div>
 			<svelte:fragment slot="trail">
 				<!-- Login/Sign-up Buttons (on the right) -->
