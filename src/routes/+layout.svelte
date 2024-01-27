@@ -24,7 +24,7 @@
 		<svelte:fragment slot="trail">
 		  <!-- Login/Sign-up Buttons (on the right) -->
 		  <button class="text-white">Login</button>
-		  <button class="text-white border border-green-500 hover:bg-green-500 hover:text-white px-4 py-2 rounded">Sign Up</button>
+		  <button class="text-white border border-green-500 hover:bg-green-500 hover:text-white px-4 py-2 rounded transition-colors">Sign Up</button>
 		</svelte:fragment>
 	  </AppBar>
 	</svelte:fragment>
