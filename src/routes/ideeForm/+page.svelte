@@ -1,7 +1,11 @@
-
+<script lang="ts">
+    export let NomDuProjet:string = "Nom du projet"
+	let tabSet: number = 0;
+</script>
 
 <form class="col-span-5 flex flex-col gap-5">
-			
+    <h1 class="text-center text-3xl" >Poster une nouvelle idée</h1>
+
 	<div class="grid grid-cols-10 gap-5">
 		<label class="label col-span-7">
 			<span>Nom Du Projet :</span>
