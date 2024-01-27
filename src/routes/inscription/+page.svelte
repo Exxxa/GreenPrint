@@ -20,20 +20,24 @@
 	</div>
 
 	<div class="col-span-2 lg:col-span-1 h-screen flex flex-col gap-5 justify-center items-center">
-		<h2 class="text-3xl">Se connecter</h2>
+		<h2 class="text-3xl">Inscription</h2>
 
 		<form class="flex flex-col gap-2">
 			<label class="label">
 				<span>Email</span>
 				<input class="input p-1" type="email" placeholder="jaimelesodd@gmail.com" />
+                <span>Confirmez votre addresse mail</span>
+				<input class="input p-1" type="email" placeholder="jaimelesodd@gmail.com" />
 			</label>
 			<label class="label">
 				<span>Mot de passe</span>
 				<input class="input p-1" type="password" placeholder="password123" />
+                <span>Confirmez votre mot de passe</span>
+				<input class="input p-1" type="password" placeholder="password123" />
 			</label>
 		</form>
-		<p>Mot de passe oublié ? <a class="text-[#50d71e]" href="#">Réinitialisez-le ici.</a></p>
-		<p>Vous n’avez pas encore de compte ? <a class="text-[#50d71e]" href="/inscription">Inscrivez-vous ici.</a></p>
-		<button type="button" class="btn variant-filled">Connection</button>
+		<p>Vous avez déjà un compte ?  <a class="text-[#50d71e]" href="/login">Connectez-vous ici.</a></p>
+		<p>En appuyant sur “S’inscrire”, vous acceptez nos conditions d’utilisation.</p>
+		<a href="/login"><button type="button" class="btn variant-filled">S'inscrire</button></a>
 	</div>
 </div>
