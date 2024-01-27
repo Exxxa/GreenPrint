@@ -12,8 +12,6 @@
     export let CommanditaireText:string = "Texte intégral en vigueur à jour de la révision constitutionnelle du 23 juillet 2008"
     export let NumODD:string = "1"
     export let NumVote:string = "0"
-
-
 </script>
 
 <div class="grid grid-cols-5 ">
