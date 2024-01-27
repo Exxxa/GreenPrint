@@ -2,7 +2,7 @@
 	<div class="text-center">
 		<h1 class="text-3xl font-bold">Construisons ensemble</h1>
 		<p class="text-xl">Un monde plus durable comme ici</p>
-		<button type="button" class="m-5 btn rounded-md variant-filled">Rejoignez Nous</button>
+		<button type="button" class="m-5 btn rounded-md variant-filled">Rejoignez-nous</button>
 	</div>
 	<img src="undraw_sharing_knowledge_03vp.svg" alt="t" class="md:w-96" />
 </div>
