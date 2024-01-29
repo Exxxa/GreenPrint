@@ -7,7 +7,10 @@
 		getDrawerStore,
 		Drawer,
 		TreeView,
-		TreeViewItem
+		TreeViewItem,
+
+		LightSwitch
+
 	} from '@skeletonlabs/skeleton';
 
 	// Floating UI for Popups
@@ -88,6 +91,7 @@
 				<a href="/signup">
 					<button class="btn variant-soft-primary">Sign Up</button>
 				</a>
+				<LightSwitch />
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
