@@ -2,7 +2,7 @@
     export let NomDuProjet:string = "Nom du projet"
 	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
 	import General from './general.svelte';
-	import Recompenses from './recompenses.svelte';
+	import Recompenses from './rewards.svelte';
 	import Contributions from './contrib.svelte';
 	let tabSet: number = 0;
 </script>
