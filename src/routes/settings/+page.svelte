@@ -27,18 +27,18 @@
 </script>
 
 <div class="flex">
-    <div class="w-1/4 p-8">
-      <h2 class="text-lg font-semibold mb-4">Settings</h2>
-      {#each sections as section}
+  <div class="w-1/4 p-8">
+    <h2 class="text-lg font-semibold mb-4">Settings</h2>
+    {#each sections as section}
         <p
-          class="cursor-pointer hover:text-primary-500 transition duration-300"
-          on:click={() => (selectedSection = section)}
-          class:font-bold={selectedSection === section}
+            class="cursor-pointer hover:text-primary-500 transition duration-300 px-4 py-2 rounded-md shadow-md hover:bg-primary-500 hover:text-white mb-4"
+            on:click={() => (selectedSection = section)}
+            class:font-bold={selectedSection === section}
         >
-          {section}
+            {section}
         </p>
-      {/each}
-    </div>
+    {/each}
+  </div>
   
     <div class="w-3/4 p-4">
     {#if selectedSection === 'General'}
