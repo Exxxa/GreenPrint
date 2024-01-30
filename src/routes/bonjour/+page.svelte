@@ -3,9 +3,7 @@
     import { Plus } from 'lucide-svelte';
     export let NomDuProjet:string = "Nom du projet"
     export let TypeDeProjet:string = "Type de projet"
-    export let IntroductionText:string = "Le peuple français proclame solennellement son attachement aux Droits de l'homme et aux principes de la souveraineté nationale tels qu'ils ont été définis par la Déclaration de 1789, confirmée et complétée par le préambule de la Constitution de 1946, ainsi qu'aux droits et devoirs définis dans la Charte de l'environnement de 2004."
     export let Récompenses:string = "XX €"
-    export let Modalités:string = "à la livraison"
     export let DescriptionText:string = "En vertu de ces principes et de celui de la libre détermination des peuples, la République offre aux territoires d'outre-mer qui manifestent la volonté d'y adhérer des institutions nouvelles fondées sur l'idéal commun de liberté, d'égalité et de fraternité et conçues en vue de leur évolution démocratique."
     export let MissionsText:string[] = ["Premier article","Second article","Troisième article"]
     export let Commanditaire:string = "Acme Inc."
@@ -19,12 +17,7 @@
         <h1 class="text-3xl" >{NomDuProjet}</h1>
         <h2 class="text-2xl" >{TypeDeProjet}</h2>
         <div>
-            <p class="underline">Introduction :</p>
-            <p>{IntroductionText}</p>
-        </div>
-        <div>
             <p><span class="underline"> Récompense :</span> {Récompenses}</p>
-            <p><span class="underline">Modalités :</span> {Modalités}</p>
         </div>
         <div>
             <p class="underline">Description :</p>
