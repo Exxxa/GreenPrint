@@ -9,7 +9,6 @@
 		TreeView,
 		TreeViewItem,
 		LightSwitch
-
 	} from '@skeletonlabs/skeleton';
 
 	// Floating UI for Popups
@@ -37,6 +36,7 @@
 	// 	drawerStore.close(drawerSettings);
 	// }
 </script>
+
 <Drawer>
 	<div class="p-10 flex flex-col gap-10">
 		<div class="item-center justify-center font-bold">
@@ -63,7 +63,8 @@
 			<TreeViewItem>Les projets</TreeViewItem>
 			<TreeViewItem>Les Objectifs du développement durable</TreeViewItem>
 			<TreeViewItem>Comment contribuer ?</TreeViewItem>
-			<TreeViewItem on:click={() => window.location.href='/settings'}>Settings</TreeViewItem> <!-- New Settings Button -->
+			<TreeViewItem on:click={() => (window.location.href = '/settings')}>Settings</TreeViewItem>
+			<!-- New Settings Button -->
 		</TreeView>
 	</div>
 </Drawer>
@@ -91,7 +92,10 @@
 					<button class="btn variant-soft-primary">Sign Up</button>
 				</a>
 				<LightSwitch />
-				<button class="btn variant-ghost" on:click={() => window.location.href='/settings'}>Settings</button> <!-- New Settings Button -->
+				<button class="btn variant-ghost" on:click={() => (window.location.href = '/settings')}
+					>Settings</button
+				>
+				<!-- New Settings Button -->
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
@@ -99,4 +103,3 @@
 	<!-- Page Route Content -->
 	<slot />
 </AppShell>
-
