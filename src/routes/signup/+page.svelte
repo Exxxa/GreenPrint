@@ -1,7 +1,7 @@
 <div id="page complete" class="grid grid-cols-2">
 	<div id="gauche" class="hidden lg:block lg:col-span-1 h-screen relative">
 		<div
-			class="absolute w-full h-full opacity-30 bg-[url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpixnio.com%2Ffree-images%2F2017%2F09%2F14%2F2017-09-14-06-20-50.jpg&f=1&nofb=1&ipt=dd00894a7d971225f129cc904196c44295bd4ce1d419bc6d6dcaae0f1efa7af2&ipo=images')]"
+			class="absolute w-full h-full opacity-70 dark:bg-[url('/dark_forest.jpg')] bg-[url('/light_forest.jpg')]"
 		></div>
 		<div class="absolute w-full h-full flex justify-center items-center z-20">
 			<svg
@@ -25,15 +25,21 @@
 		<form class="flex flex-col gap-2">
 			<label class="label">
 				<span>Email</span>
-				<input class="input p-1" type="email" placeholder="jaimelesodd@gmail.com" />
-                <span>Confirmez votre addresse mail</span>
-				<input class="input p-1" type="email" placeholder="jaimelesodd@gmail.com" />
+				<input class="block input p-1 w-80" type="email" placeholder="jaimelesodd@gmail.com" />
+			
+				<span>Confirmez votre addresse mail</span>
+				<input class="block input p-1 w-80" type="email" placeholder="jaimelesodd@gmail.com" />
+				
+				
+                
 			</label>
 			<label class="label">
 				<span>Mot de passe</span>
-				<input class="input p-1" type="password" placeholder="password123" />
-                <span>Confirmez votre mot de passe</span>
-				<input class="input p-1" type="password" placeholder="password123" />
+				<input class="block input p-1 w-80" type="password" placeholder="password123" />
+				<span>Confirmez votre mot de passe</span>
+				<input class="block input p-1 w-80" type="password" placeholder="password123"/>
+				
+                
 			</label>
 		</form>
 		<p>Vous avez déjà un compte ?  <a class="text-[#50d71e]" href="/login">Connectez-vous ici.</a></p>
@@ -41,3 +47,11 @@
 		<a href="/login"><button type="button" class="btn variant-filled">S'inscrire</button></a>
 	</div>
 </div>
+
+<!--  
+<span>Confirmez votre addresse mail</span>
+				<input class="input p-1" type="email" placeholder="jaimelesodd@gmail.com" />
+				<span>Confirmez votre mot de passe</span>
+				<input class="input p-1" type="password" placeholder="password123" />
+			
+				-->
