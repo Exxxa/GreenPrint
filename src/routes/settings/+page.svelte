@@ -1,5 +1,8 @@
 <!-- src/routes/settings/Settings.svelte -->
+
 <script>
+    import { FileDropzone, SlideToggle  } from '@skeletonlabs/skeleton';
+    import { writable } from 'svelte/store';
     let selectedSection = 'General';
   
     const sections = [
@@ -17,13 +20,25 @@
   
     //example for data structure, to be removed with database
     let showPassword = false ;
+    let profileVisibility = 'Public';
     let generalSettings = {
-    name: 'Pierre LOPEZ',
-    email: 'lopez@et.esiea.fr',
-    profilePicture: 'https://example.com/profile-picture.jpg',
-    phoneNumber: '0692303467', 
-    is2FAEnabled: false, 
-  };
+      name: 'Pierre LOPEZ',
+      email: 'lopez@et.esiea.fr',
+      profilePicture: 'https://example.com/profile-picture.jpg',
+      phoneNumber: '0692303467', 
+      is2FAEnabled: false, 
+    };
+    let showSettings = {
+      Name: true,
+      Email: true,
+      Profile_Picture: true,
+      Phone_Number: true,
+    };
+    let emailNotifications = writable(false);
+    let smsNotifications = writable(false);
+    let pushNotifications = writable(false);
+
+
 </script>
 
 <div class="flex">
@@ -39,7 +54,6 @@
         </p>
     {/each}
   </div>
-  
     <div class="w-3/4 p-4">
     {#if selectedSection === 'General'}
         <!-- General Settings -->
@@ -57,6 +71,7 @@
         <div class="mb-4">
           <label class="block text-sm font-medium text-gray-600">Profile Picture URL</label>
           <input type="url" bind:value={generalSettings.profilePicture} class="text-gray-600 mt-1 p-2 border rounded-md w-full" />
+          <FileDropzone name="files" />
         </div>
         <div class="mb-4">
           <button class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -67,8 +82,6 @@
     {#if selectedSection === 'Security'}
     <!-- Security Settings -->
     <h3 class="text-xl font-semibold mb-4">Security Settings</h3>
-        <!-- Security Settings -->
-        <h3 class="text-xl font-semibold mb-4">Security Settings</h3>
         <div class="mb-4">
           <label class="block text-sm font-medium text-gray-600">Password</label>
           <div class="relative">
@@ -93,27 +106,47 @@
     </div>
     {/if}
 
-
-
     {#if selectedSection === 'Privacy'}
-        <!-- Privacy Settings -->
-        <h3 class="text-xl font-semibold mb-4">Privacy Settings</h3>
-        <div class="mb-4">
-          <label class="block text-sm font-medium text-gray-600">Profile Visibility</label>
-          <select class="text-gray-600 mt-1 p-2 border rounded-md w-full">
-            <option>Public</option>
-            <option>Private</option>
-          </select>
-        </div>
-    {/if}
-    {#if selectedSection === 'Notifications'}
-        <!-- Notifications Settings -->
-        <h3 class="text-xl font-semibold mb-4">Notifications Settings</h3>
-        <div class="mb-4">
-          <label class="block text-sm font-medium text-gray-600">Email Notifications</label>
-          <input type="checkbox" class="text-gray-600 mt-1 p-2 border rounded-md w-full" />
-        </div>
+      <!-- Privacy Settings -->
+      <h3 class="text-2xl font-semibold mb-4">Privacy Settings</h3>
+      <div class="mb-4">
+        <label class="block text-lg font-medium text-gray-600">Profile Visibility</label>
+        <select bind:value={profileVisibility} class="text-gray-600 mt-1 p-2 border rounded-md w-full">
+          <option>Public</option>
+          <option>Private</option>
+        </select>
+      </div>
+      {#if profileVisibility === 'Private'}
+        <p class="text-lg">No information is provided, not even email, username or profile picture if you wish not.</p>
+        {#each Object.keys(showSettings) as setting (setting)}
+          <div class="mb-4">
+            <label class="block text-lg font-medium text-gray-600">{setting}</label>
+            <SlideToggle name="slide" bind:checked={setting} />
+          </div>
+        {/each}
       {/if}
+      {#if profileVisibility === 'Public'}
+        <p class="text-lg">All information is public.</p>
+      {/if}
+    {/if}
+
+    
+    {#if selectedSection === 'Notifications'}
+      <!-- Notifications Settings -->
+      <h3 class="text-xl font-semibold mb-4">Notifications Settings</h3>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-600">Email Notifications</label>
+        <SlideToggle name="emailNotifications" bind:checked={emailNotifications} />
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-600">SMS Notifications</label>
+        <SlideToggle name="smsNotifications" bind:checked={smsNotifications} />
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-600">Push Notifications</label>
+        <SlideToggle name="pushNotifications" bind:checked={pushNotifications} />
+      </div>
+    {/if}
       {#if selectedSection === 'Account'}
         <!-- Account Settings -->
         <h3 class="text-xl font-semibold mb-4">Account Settings</h3>

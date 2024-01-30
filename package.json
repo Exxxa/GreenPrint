@@ -39,9 +39,10 @@
   "type": "module",
   "dependencies": {
     "@floating-ui/dom": "1.5.3",
-    "lucide-svelte": "^0.314.0",
-    "svelte-routing": "^2.11.0",
     "clsx": "^2.1.0",
+    "lucide-svelte": "^0.314.0",
+    "pocketbase": "^0.21.0",
+    "svelte-routing": "^2.11.0",
     "tailwind-merge": "^2.2.1"
   }
 }
