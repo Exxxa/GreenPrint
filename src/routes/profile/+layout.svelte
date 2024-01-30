@@ -33,7 +33,7 @@
 	hover="hover:variant-soft-primary transition-colors"
 	flex="flex-1 lg:flex-none"
 	rounded=""
-	class="bg-surface-100-800-token w-full sticky top-0 z-50"
+	class="bg-surface-100-800-token w-full sticky top-0 z-[1]"
 >
 	<TabAnchor href="/profile/projects" selected={$page.url.pathname === '/profile/projects'}>
 		<svelte:fragment slot="lead"><FolderKanban class="w-full flex items-center"/></svelte:fragment>
