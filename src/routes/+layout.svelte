@@ -8,7 +8,6 @@
 		Drawer,
 		TreeView,
 		TreeViewItem,
-
 		LightSwitch
 
 	} from '@skeletonlabs/skeleton';
@@ -38,7 +37,6 @@
 	// 	drawerStore.close(drawerSettings);
 	// }
 </script>
-
 <Drawer>
 	<div class="p-10 flex flex-col gap-10">
 		<div class="item-center justify-center font-bold">
@@ -65,6 +63,7 @@
 			<TreeViewItem>Les projets</TreeViewItem>
 			<TreeViewItem>Les Objectifs du développement durable</TreeViewItem>
 			<TreeViewItem>Comment contribuer ?</TreeViewItem>
+			<TreeViewItem on:click={() => window.location.href='/settings'}>Settings</TreeViewItem> <!-- New Settings Button -->
 		</TreeView>
 	</div>
 </Drawer>
@@ -75,7 +74,7 @@
 		<AppBar>
 			<svelte:fragment slot="lead">
 				<!-- Menu Button (on the left) -->
-				<button class="btn variant-ghost" on:click={opennav}> &#9776; Menu </button>
+				<button class="btn variant-ghost" on:click={opennav}> ☰ Menu </button>
 			</svelte:fragment>
 			<div class="gap-5 item-center justify-center items-center">
 				<a href="/" class="flex gap-5 item-center justify-center items-center">
@@ -92,6 +91,7 @@
 					<button class="btn variant-soft-primary">Sign Up</button>
 				</a>
 				<LightSwitch />
+				<button class="btn variant-ghost" on:click={() => window.location.href='/settings'}>Settings</button> <!-- New Settings Button -->
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
