@@ -43,10 +43,6 @@
 	</div>
 
 	<label class="label">
-		<span>Introduction :</span>
-        <textarea class="textarea" rows="4" placeholder="L'introduction du projet" />
-	</label>
-	<label class="label">
 		<span>Description :</span>
         <textarea class="textarea" rows="4" placeholder="La description du projet" />
 	</label>

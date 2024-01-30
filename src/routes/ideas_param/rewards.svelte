@@ -13,9 +13,5 @@
 		<span>Montant :</span>
 		<input class="input p-1" placeholder="Le montant de la récompense" />
 	</label>
-	<label class="label">
-		<span>Modalités :</span>
-		<input class="input p-1" placeholder="Les modalités de la transaction" />
-	</label>
 	<button type="button" class="btn variant-filled">Sauvegarder</button>
 </form>
