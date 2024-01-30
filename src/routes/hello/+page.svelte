@@ -1,15 +1,18 @@
 <script lang="ts">
+    export let data
+    let idea = data.idea
     import { Heart } from 'lucide-svelte';
     import { Plus } from 'lucide-svelte';
-    export let NomDuProjet:string = "Nom du projet"
-    export let TypeDeProjet:string = "Type de projet"
-    export let Récompenses:string = "XX €"
-    export let DescriptionText:string = "En vertu de ces principes et de celui de la libre détermination des peuples, la République offre aux territoires d'outre-mer qui manifestent la volonté d'y adhérer des institutions nouvelles fondées sur l'idéal commun de liberté, d'égalité et de fraternité et conçues en vue de leur évolution démocratique."
-    export let MissionsText:string[] = ["Premier article","Second article","Troisième article"]
-    export let Commanditaire:string = "Acme Inc."
-    export let CommanditaireText:string = "Texte intégral en vigueur à jour de la révision constitutionnelle du 23 juillet 2008"
-    export let NumODD:string = "1"
-    export let NumVote:string = "0"
+    
+    let NomDuProjet:string = idea.title
+    let TypeDeProjet:string = idea.type
+    let Récompenses:string = idea.reward + " €"
+    let DescriptionText:string = idea.description
+    let MissionsText:string = idea.mission
+    let Commanditaire:string = idea.creators
+    let CommanditaireText:string = "Texte intégral en vigueur à jour de la révision constitutionnelle du 23 juillet 2008"
+    let NumODD:string = idea.odd
+    let NumVote:string = "0"
 </script>
 
 <div class="grid grid-cols-5 ">
@@ -25,11 +28,7 @@
         </div>
         <div>
             <p class="underline">Liste des missions :</p>
-            <ul class="list-disc pl-5">
-                {#each MissionsText as mt, index}
-                    <li> {mt}</li>
-                {/each}
-            </ul>
+            <p>{MissionsText}</p> 
         </div>
 
         
